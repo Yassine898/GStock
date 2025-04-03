@@ -21,7 +21,7 @@
                 <a href="/getProductBySupp" class="text-decoration-none">product by supplier</a>
             </li>
             <li class="list-group-item">
-                <a href="#" class="text-decoration-none">Historique des transactions</a>
+                <a href="/getProStore" class="text-decoration-none">products by store</a>
             </li>
             <li class="list-group-item">
                 <a href="#" class="text-decoration-none">Paramètres du compte</a>
