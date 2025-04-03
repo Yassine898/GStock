@@ -36,7 +36,6 @@ class ProductController extends Controller
             $query->where('store_id', $store->id);
         })
         ->get();
-        var_dump($products);
-    return response()->json(compact('products'));
+    return response()->json($products);
     }
 }
