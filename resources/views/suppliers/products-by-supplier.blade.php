@@ -28,6 +28,7 @@
         if (supplierId) {
             axios.get('/api/productBysupplier/' + supplierId)
                 .then((response) => {
+                    console.log(response)
                     if (response.data && response.data.products.length > 0) {
                         let tableHTML = `
         <table class="table table-striped table-bordered">

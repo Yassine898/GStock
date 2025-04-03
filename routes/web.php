@@ -32,4 +32,6 @@ Route::get('/api/productBysupplier/{supplier}',[ProductController::class,'bysupp
 
 Route::get("/getProStore",[StoreController::class,'stores']);
 
+Route::get('/api/getProductBystore/{store}',[ProductController::class,'byStore']);
+
 
