@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Customer;
+use App\Mail\MailableName;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class CustomerController extends Controller
 {
@@ -33,8 +35,7 @@ class CustomerController extends Controller
                     'phone'=>$request->phone
                 ]);
             
-                $customers=Customer::all();
-            
+                Mail::to('yassinalilti6@gmail.com')->send(new MailableName($request->firstName));
                 return redirect('/clients')->with('success','Customer added successfully!');
             
     }
