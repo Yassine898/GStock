@@ -1,6 +1,7 @@
 @if ($products)
-        <table class="table table-striped table-bordered">
-            <thead>
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead class="table-light">
                 <tr>
                     <th>Name</th>
                     <th>Description</th>
@@ -21,4 +22,5 @@
                 @endforeach
             </tbody>
         </table>
+    </div>
 @endif
