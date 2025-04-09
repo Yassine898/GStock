@@ -2,6 +2,12 @@
 
 @section('content')
     <!-- Main Content Section -->
+    @if (session('error'))
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ session('error') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
     <main class="container my-5">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -59,4 +65,14 @@
             </div>
         </div>
     </main>
+
+    <script>
+    $(document).ready(function() {
+        setTimeout(function() {
+            $('.alert').fadeOut('slow', function() {
+                $(this).remove();
+            });
+        }, 5000); // 5000 milliseconds = 5 seconds
+    });
+</script>
 @endsection

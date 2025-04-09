@@ -78,7 +78,7 @@
         <div class="container">
             <h1 class="display-4 fw-bold">Bienvenue sur MonSite</h1> <!-- display-4 and fw-bold -->
             <p class="lead">Votre destination pour des solutions innovantes.</p> <!-- lead -->
-            <a href="#" class="btn btn-primary btn-lg">En savoir plus</a> <!-- btn-lg -->
+            <a href="/login" class="btn btn-primary btn-lg">Login</a> <!-- btn-lg -->
         </div>
     </section>
 

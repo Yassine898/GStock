@@ -10,6 +10,7 @@ use App\Models\Stock;
 use App\Models\Store;
 use App\Models\Supplier;
 use App\Models\Transaction;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -66,5 +67,7 @@ class DatabaseSeeder extends Seeder
 
         // Create transactions for orders and stocks
         Transaction::factory(50)->create();
+
+        User::factory(20)->create();
     }
 }

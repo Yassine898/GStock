@@ -8,12 +8,23 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\UserController;
+use App\Http\Middleware\CheckUserLogged;
 use App\Models\Product;
 
 Route::get('/',function (){
     return view('acceuil');
 });
-Route::get('/clients',[CustomerController::class,'index']);
+
+
+Route::get('/login',function(){
+    return view('user.login');
+});
+
+Route::post('/login/user',[UserController::class,'login'])->name('user.login');
+
+
+Route::get('/clients',[CustomerController::class,'index'])->middleware([CheckUserLogged::class]);
 Route::get('/customer/Add',[CustomerController::class,'AddForm']);
 Route::post('/customer/store',[CustomerController::class,'store']);
 Route::get('/suppliers',[SupplierController::class,'index']);
